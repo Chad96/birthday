@@ -334,18 +334,6 @@ function loadImagesFromFolder() {
 function setupGalleryFromFolder() {
     uploadArea.style.display = 'none';
     loadImagesFromFolder();
-    
-    // Show a message if no images are found
-    setTimeout(() => {
-        if (uploadedImages.length === 0) {
-            const noImagesMsg = document.createElement('div');
-            noImagesMsg.style.textAlign = 'center';
-            noImagesMsg.style.padding = '3rem 2rem';
-            noImagesMsg.style.color = 'var(--text-secondary)';
-            noImagesMsg.innerHTML = '<p>📸 Add your photos to the <code>msc/img/</code> folder with names like 1.jpg, 2.jpg, 3.jpg, etc.</p>';
-            galleryGrid.appendChild(noImagesMsg);
-        }
-    }, 1500);
 }
 
 function addImageToGallery(imageSrc, index) {
